@@ -5,48 +5,43 @@ body {
   background: #f2f2f2;
   color: #333;
   font-family: cursive;
+  margin: 0;
 }
 
 a{
   color: #333;
   text-decoration: none;
 }
-.content {
-  max-width: 960px;
-  margin: 0 auto
-}
+
 nav {
-  margin: 10px auto 80px;
-  padding: 10px 0;
+  margin: 0 auto 50px;
+  padding: 5px 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid rgb(109, 109, 109);
   font-family: cursive;
 }
 
 nav a{
   margin-left: 12px;
-    color: rgb(77, 170, 96);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #112a6b;
+    font-family:  Arial, sans-serif;
 
 
 }
-nav .logo {
-  margin-right: auto;
+ .logo {
+  display: block;
+  margin: 0;
+  width: 50%;
+
 }
 
- 
-.logo h1 {
-  position: relative;
-  top: 18px;
-  left: 10px;
-}
+ ul{
+   padding: 0;
+    width: 45%;
+ }
 
-.logo Image{
-  float:left;
-  background: #555;
-}
 
 footer {
   display: block;
@@ -86,4 +81,90 @@ footer {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+
+
+@media (min-width: 500px) {
+  .navbar .DrawerToggle{
+    display: none;
+  }
+  .DrawerToggle {
+      display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar{
+    display: block;
+    height: 40px;
+    width: 100%;
+    /* background:url() ; no-repeat 98% center */
+    background-color: #555;  
+    margin: 0
+  }
+  nav {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  
+  .open {
+    overflow: hidden;
+    background: #505050;
+    height:0;
+    margin: 0;
+    width: 100%;
+  }
+  .close{
+    height: auto;
+    overflow: hidden;
+    background: #505050;
+    margin: 0;
+    width: 100%;
+  }
+  nav ul a {
+    display: block;
+    text-align: left;
+    background: #505050;
+
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid #404040 ;
+  }
+} 
+
+.Backdrop {
+  
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 6, 0, 0, 0.5);
+
+}
+
+/* Draw Toogle styles */
+.DrawerToggle {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.DrawerToggle div {
+  width: 90%;
+  height: 3px;
+  background-color: white;
+}
+.logo{
+  text-align: center;
+  width: 100%;
 }

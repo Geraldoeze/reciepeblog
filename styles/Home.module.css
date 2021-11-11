@@ -5,6 +5,7 @@
 }
 .text {
     color: #777;
+    text-align: center;
 }
 .btn {
     display: block;
@@ -15,6 +16,7 @@
     border-radius: 4px;
     color: white;
     text-align: center;
+    cursor: pointer;
 }
 .hh{
     text-align: center;
@@ -37,4 +39,10 @@
 .error a {
     color: #4979ff;
     text-decoration: underline
+}
+
+
+
+@media (max-width: 500px){
+
 }

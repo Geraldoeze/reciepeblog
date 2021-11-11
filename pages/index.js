@@ -1,16 +1,17 @@
 import Head from 'next/head'
 import Link from "next/link";
 import styles from '../styles/Home.module.css'
+import '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <>
     <Head>
       <title> Reciepe-Blog | Home</title>
-      <meta name="keywords" content="reciepe"/>
+      <meta name="viewport" content="width=device-width"/>
     </Head>
     <div>
-      <h1 className = {styles.title}>Welcome to Next </h1>
+      <h1 className = {styles.title}>Welcome to Reciepe-Blog </h1>
       <p className= {styles.text}> Lorem ipsum dolor sit amet consectetur adipisicing elit. In nobis 
         veritatis perspiciatis delectus odit! Ex iure, quia dolorem 
         suscipit fugit quos repudiandae reprehenderit nesciunt natus, dol
