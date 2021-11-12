@@ -4,53 +4,60 @@ import '../styles/Create.module.css'
 
 import React from 'react';
 
-// const style = {
-//   .btn1 {
-      
-//     background-color: transparent;
-//     color:rgba(119, 119, 27, 0.925);
-//     border: 1px solid yellow;
-//     font-weight:bold ;
-//     cursor: pointer;
-//     margin: 5px;
-//     padding: 10px 5px;
-//     text-align: center;
-//   }
-
-//   .btn1:hover,
-//   .btni:active {
-//     background-color: gold;
-//     color: maroon;
-//   }
-// }
-
 
 
 class NewPost extends React.Component {
     state = {
         title: '',
-        content:'',
+        ingredients:'',
         author: ''
     }
-
-    
+    // deletePostHandler = () => {
+    //     const data = {
+    //         title: this.state.title,
+    //         body: this.state.content,
+    //         author: this.state.author
+    //     }
+    //     axios.post(` /posts/`, data)
+    //         .then(response => {
+    //             console.log(response)
+    //         })
+    checkcode=()=>{
+        console.log(this.state)
+    }
     render() { 
+        
         return (
-            <div className="cont">
-            <h1>Add a Post</h1>
-         
-            <label>Title</label>
-            <input value={this.state.title} className="input"  type="text" />
-            <label>Content</label>
-            <textarea value={this.state.content}className="input c" type="text"/>
-            <label>Author</label>
-            <select value={this.state.author} className="input " type="text">
-                <option value="Gerald">Gerald</option>
-                <option value="Crisom">Crimson</option>
-            </select>
-            <div>
-                <button className="btn1" >Add Post</button>
-            </div>
+            <div className={styles.cont}>
+                <h1>Add a Post</h1>
+                <form>
+                <label className={styles.label} >Title</label>
+                <input className={styles.input} 
+                    value={this.state.title}
+                    onChange={(event)=>this.setState({title: event.target.value})}  
+                    name="title"
+                    type="text"
+                    required
+                     />
+                <label className={styles.label}>Ingredients</label>
+                <textarea className={styles.input} 
+                    value={this.state.ingredients}
+                    required
+                    onChange={(event)=>event.target.value}  
+                    type="text"/>
+                <label className={styles.label}>Author</label>
+                <input  className={styles.input} 
+                    value={this.state.author}
+                    required
+                    onChange={(event)=>event.target.value}  
+                    type="text" />
+                
+                
+                    <button className={styles.btn1} 
+                        onClick={this.checkcode}
+                        >Add Post
+                        </button>
+                </form>
         </div>
         );
     }
