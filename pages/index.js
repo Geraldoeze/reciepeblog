@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Link from "next/link";
 import styles from '../styles/Home.module.css'
 import '../styles/Home.module.css'
+import 'materialize-css/dist/css/materialize.min.css'
+
+
 
 export default function Home() {
   return (
@@ -10,7 +13,9 @@ export default function Home() {
       <title> Reciepe-Blog | Home</title>
       <meta name="viewport" content="width=device-width"/>
     </Head>
-    <div>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/materialize.min.js"></script>
+
+    <div >
       <h1 className = {styles.title}>Welcome to Reciepe-Blog </h1>
       <p className= {styles.text}> Lorem ipsum dolor sit amet consectetur adipisicing elit. In nobis 
         veritatis perspiciatis delectus odit! Ex iure, quia dolorem 

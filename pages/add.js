@@ -22,7 +22,14 @@ class NewPost extends React.Component {
     //         .then(response => {
     //             console.log(response)
     //         })
-    checkcode=()=>{
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id] : e.target.value
+        })
+    }
+    checkcode = (e) => {
+        e.preventDefault()
         console.log(this.state)
     }
     render() { 
@@ -30,12 +37,12 @@ class NewPost extends React.Component {
         return (
             <div className={styles.cont}>
                 <h1>Add a Post</h1>
-                <form>
+                <form onSubmit={this.checkcode}>
                 <label className={styles.label} >Title</label>
                 <input className={styles.input} 
                     value={this.state.title}
-                    onChange={(event)=>this.setState({title: event.target.value})}  
-                    name="title"
+                    onChange={this.handleChange}  
+                    id="title"
                     type="text"
                     required
                      />
@@ -43,19 +50,17 @@ class NewPost extends React.Component {
                 <textarea className={styles.input} 
                     value={this.state.ingredients}
                     required
-                    onChange={(event)=>event.target.value}  
+                    onChange={this.handleChange}  
                     type="text"/>
                 <label className={styles.label}>Author</label>
                 <input  className={styles.input} 
                     value={this.state.author}
                     required
-                    onChange={(event)=>event.target.value}  
+                    onChange={this.handleChange}  
                     type="text" />
                 
                 
-                    <button className={styles.btn1} 
-                        onClick={this.checkcode}
-                        >Add Post
+                    <button className={styles.btn1} >Add Post
                         </button>
                 </form>
         </div>
