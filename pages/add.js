@@ -9,7 +9,7 @@ import React from 'react';
 class NewPost extends React.Component {
     state = {
         title: '',
-        ingredients:'',
+        ingredients: '',
         author: ''
     }
     // deletePostHandler = () => {
@@ -31,6 +31,13 @@ class NewPost extends React.Component {
     checkcode = (e) => {
         e.preventDefault()
         console.log(this.state)
+        fetch("https://obscure-thicket-64942.herokuapp.com/reciepe",{
+            method: "POST",
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(this.state)
+        }).then(()=>{
+            console.log("new blog added")
+        })
     }
     render() { 
         
@@ -51,12 +58,14 @@ class NewPost extends React.Component {
                     value={this.state.ingredients}
                     required
                     onChange={this.handleChange}  
+                    id="ingredients"
                     type="text"/>
                 <label className={styles.label}>Author</label>
                 <input  className={styles.input} 
                     value={this.state.author}
                     required
                     onChange={this.handleChange}  
+                    id="author"
                     type="text" />
                 
                 

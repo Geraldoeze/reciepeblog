@@ -31,12 +31,12 @@ const Details = ({ reciepe }) => {
     const id = reciepe.id
     // i think we need to work on the id 
     // we need to pass the id gotten from the button click and use that to delete
-    // const router = useRouter();
+    const router = useRouter();
     const Deleteblog = fetch(`https://obscure-thicket-64942.herokuapp.com/reciepe/${id}`, {
         method: "DELETE"
     })
-    // .then(router.push('/'))
-    // .catch(function(error) {console.log(error)})
+    .then(router.push('/'))
+    .catch(function(error) {console.log(error)})
     
     return ( 
         <div className={styles.btn}>
