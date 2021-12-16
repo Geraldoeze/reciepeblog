@@ -15,16 +15,16 @@ const Navbar = (props) => {
         <Backdrop show={props.open} clicked={props.closed} />       
 
         <nav>
-            <h1 onClick={props.drawerTogged} className = "logo">Reciepe-Blog</h1>
+            <h1 className = "logo">Reciepe-Blog</h1>
                <a className="navbar"> 
                    <DrawerToogle clicked={props.drawerTogged}/>
                 </a>
                 
            <ul className={attachedClasses}>
-               <Link href = "/" ><a>Home</a></Link>
-               <Link href = "/about "><a>About</a></Link>
-               <Link href = "/reciepe/"><a>All Reciepe</a></Link>
-               <Link href = "/add" > Add Reciepe</Link>
+               <Link href = "/" ><a onClick={props.drawerTogged} >Home</a></Link>
+               <Link href = "/about "><a onClick={props.drawerTogged}>About</a></Link>
+               <Link href = "/reciepe/"><a onClick={props.drawerTogged}>All Reciepe</a></Link>
+               <Link href = "/add" ><a onClick={props.drawerTogged}> Add Reciepe</a></Link>
            </ul>
        </nav>
    </div>

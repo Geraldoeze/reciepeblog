@@ -3,53 +3,61 @@
 
 body {
   background: #f2f2f2;
-  color: #333;
+  color: #ddd;
   font-family: cursive;
   margin: 0;
+  height: 100;
+  background:  url(chop.jpg);
+  background-size: cover;
 }
 
+/* Main style */
+
+.content{
+  
+  font-family: Cambria, serif;
+}
+/* All a tags */
 a{
-  color: #333;
   text-decoration: none;
 }
 
+/* Navigation styles */
 nav {
-  margin: 0 auto 50px;
-  padding: 5px 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border-bottom: 2px solid rgb(109, 109, 109);
-  font-family: cursive;
+  width: 100%;
+  background-color: rgb(50, 58, 66);
+  margin-bottom: 100px;
 }
 
-nav a{
-  margin-left: 12px;
-    color: #112a6b;
-    font-family:  Arial, sans-serif;
-
-
+.close {
+  margin-left: auto;
+  
 }
- .logo {
-  display: block;
-  margin: 0;
-  width: 50%;
-
+.open{
+  margin-left: auto;
 }
-
- ul{
-   padding: 0;
-    width: 45%;
- }
-
+.open a {
+  color: #f1356d;
+  margin: 5px;
+}
+.close a {
+  color: #f1356d;
+}
+.logo {
+  width: 60%;
+  color: #f1356d;
+  margin: auto;
+}
 
 footer {
-  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(50, 58, 66);
+  color:#f1356d;
   text-align: center;
-  padding: 30px 0;
-  margin-top: 60px;
-  color: rgba(0, 70, 64, 0.344);
-  border-top: 1px solid #eaeaea;
 }
 
 .create {
@@ -85,7 +93,7 @@ footer {
 
 
 
-@media (min-width: 500px) {
+@media (min-width: 480px) {
   .navbar .DrawerToggle{
     display: none;
   }
@@ -107,9 +115,8 @@ footer {
     display: block;
     margin-left: 0;
     padding: 0;
+    margin-bottom: 50px;
   }
-
-  
   .open {
     overflow: hidden;
     background: #505050;
@@ -123,7 +130,9 @@ footer {
     background: #505050;
     margin: 0;
     width: 100%;
+    padding: 0;
   }
+
   nav ul a {
     display: block;
     text-align: left;
@@ -134,7 +143,12 @@ footer {
     padding: 10px;
     border-bottom: 1px solid #404040 ;
   }
+  
+footer{
+  font-size: 12px;
+}
 } 
+
 
 .Backdrop {
   
@@ -166,5 +180,4 @@ footer {
 }
 .logo{
   text-align: center;
-  width: 100%;
 }

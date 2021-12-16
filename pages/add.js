@@ -36,7 +36,7 @@ class NewPost extends React.Component {
         
         return (
             <div className={styles.cont}>
-                <h1>Add a Post</h1>
+                <h1 className ={styles.hhh}>Add a Post</h1>
                 <form onSubmit={this.checkcode}>
                 <label className={styles.label} >Title</label>
                 <input className={styles.input} 

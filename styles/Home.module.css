@@ -1,10 +1,10 @@
 .title {
-    color: #333;
+    color: rgb(97, 14, 19);
     padding-bottom: 20px;
     text-align: center;
 }
 .text {
-    color: #777;
+    color: rgb(4, 78, 1);
     text-align: center;
 }
 .btn {
@@ -41,8 +41,19 @@
     text-decoration: underline
 }
 
+.cent{
+    text-align: center;
+    width: 60%;
+    margin:auto;
+    border: 1px solid rgb(49, 3, 3);
+    background-color: wheat;
+
+}
 
 
-@media (max-width: 500px){
-
+@media (max-width: 480px){
+ .cent{
+     width: 70%;
+     
+ }
 }
